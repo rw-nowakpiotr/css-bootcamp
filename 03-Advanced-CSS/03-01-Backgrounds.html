@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    /* obrazke jest pozycjnowany wzgledem lewego górnego rogu */
+    div {
+        height: 500px;
+        width: 500px;
+        border: 10px double red;
+        background-image: url('/03-Advanced-CSS/img/image-1.jpeg');
+        color: white;
+        margin: 100px auto;
+        /* background-size: 200px; */
+        /* background-repeat: repeat-y; */
+        background-repeat: no-repeat;
+        /* background-position: 10px 10px; */ /* obrazke jest pozycjnowany wzgledem lewego górnego rogu */
+        background-position: right 10px bottom 10px; /* moze byc w procentach */
+        background-attachment: fixed; /* wzgledem ViewPortu - tzn. paralle effect */
+    }
+</style>
+
+<body>
+    <div>Hellow word</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ipsum! Vel ad vero nemo qui asperiores impedit laboriosam illo id laborum, beatae exercitationem molestiae tenetur. Eos dolore commodi ducimus? Deserunt.</p>
+</body>
+
+</html>

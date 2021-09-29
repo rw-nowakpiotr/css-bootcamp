@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    /* obrazke jest pozycjnowany wzgledem lewego górnego rogu */
+    div {
+        height: 500px;
+        width: 500px;
+        border: 10px double red;
+        background-image: url('/03-Advanced-CSS/img/image-1.jpeg');
+        color: white;
+        margin: 50px auto;
+        /* background-repeat: repeat-y; */
+        background-repeat: no-repeat;
+        /* background-position: 10px 10px; */ /* obrazke jest pozycjnowany wzgledem lewego górnego rogu */
+        /* background-position: right 10px bottom 10px; moze byc w procentach */
+        
+        /* background-attachment: fixed; wzgledem ViewPortu - tzn. paralle effect */
+        
+        /* background-size: 300px; */ /* auto 150px; - warto ustawiac auto bo bedzie to lepiej resajzowane */
+        /* background-size: 50 % - to będzie 50% width, ale heigth bedzie auto - automatycznie */
+
+        /* to jest najczesniej uzuwana */
+        background-size: cover; /* czesc bedzie obciete w wyniku resizu - tzn. clip, 100 % szerkosci i wysokosci */
+        /* background-size: contain; */ /* uzyje 100 szerkosci kontenera, ale wysokosc pewnie bedzie obcieta */
+
+        /* background-origin: padding-box; */ /* to jest default i jesli jest double border to od wewnetrzej strony 2 granicy */
+        background-origin: border-box;  /* to jest default i jesli jest double border to od wewnetrzej strony 1 granicy od lewgo górnego rogu  */
+        background-clip: border-box; /* to dobrze widac na podwonej granicy, bo clip przycina obracki np. jesli padding-box; */
+    }
+</style>
+
+<body>
+    <div>Hellow word</div>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut, ipsum! Vel ad vero nemo qui asperiores impedit laboriosam illo id laborum, beatae exercitationem molestiae tenetur. Eos dolore commodi ducimus? Deserunt.</p>
+</body>
+
+</html>

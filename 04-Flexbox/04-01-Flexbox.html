@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .div{
+        /* container */
+        display: flex;
+
+        flex-direction: row;
+        flex-wrap: nowrap;
+        flex-flow: row nowrap; /* 2 in 1 -> flex-direction oraz flex-wrap */
+        
+        justify-content: flex-start;
+        align-items: stretch;
+        align-content: stretch;
+
+        /* items */
+        order: 0; /* jak pozycje bedzie mial element*/
+        align-self: auto; /* pozycjonowanie poj. elem. */
+
+        flex-grow: 0; /* jak szybko bedzie roslo */
+        flex-basis: auto; /* okresla: LENGTH  w zalesnoci od osi bedzie to width lub height */
+        flex-shrink: 1; /* jak szybko bedzie malec */
+
+        flex: 0 1 auto; /* 3 in 1 grow basis shrink. wartosci 0 1 auto sa by default*/
+    }
+</style>
+<body>
+    
+</body>
+</html>

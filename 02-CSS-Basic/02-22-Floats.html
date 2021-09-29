@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* float pozwala wyciagnac z normalnego flow i przypiac do lewgo lub prawego strony elem */
+
+    .container {
+        background-color: grey;
+        /* overflow: auto; 1. Rozwiazanie problemu */
+    }
+
+    .left {
+        background-color: orangered;
+        width: 100px;
+        height: 100px;
+        float: left;
+        max-width: ;
+    }
+
+    .right {
+        background-color: rgb(17, 209, 17);
+        width: 100px;
+        height: 100px;
+        float: right;
+    }
+    .clear { /* Rozwiazanie nr 2 - troche brzydkie */
+        clear: both;
+    }
+
+    .clearfix::after{ /* Rozwiazanie nr 3 - zamiast nr 2 */
+        content: "";
+        display: block;
+        clear: both;
+    }
+</style>
+
+<body>
+    <div class="container clearfix">
+        <div class="left"></div>
+        <div class="right"></div>
+        <!-- <div class="clear"></div> /* Rozwiazanie nr 2 - troche brzydkie */ -->
+    </div>
+</body>
+
+</html>

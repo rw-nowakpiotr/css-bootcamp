@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        height: 700px;
+
+        margin-top: 50px;
+        padding: 20px 0;
+        background-color: #f19861;
+        display: flex; /* inline-flex uzyje tyle miejsca ile potrzebuje; flex 100%*/
+        
+        /* flex-direction: row-reverse; z prawej do lewej */
+        flex-direction: row; 
+        /*defualt no-wrap, co oznacza, ze elementy moga wyjsc z kontenera */
+        flex-wrap: wrap;
+        /* flex-flow:row wrap; 2 in 1 */
+
+        justify-content: space-evenly; 
+        /* https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content */
+        /* space-between - bedzie rozciagniety. pierwszy elem na poczatek ostani na koniec */
+        /* space-around - bedzie dodawac dodatkawe przestrzenie - po równo, tak aby nie dociagac do brzegu - Items have a half-size space
+                                   on either end */
+        /* space-evenly;  distribute items evenly Items have equal space around them */
+
+        /* Jesli zmieniamy direction to zmieniamy głowna os, wiec rozciaganie max dzieje sie w osi y, kontenra dzieje
+         sie w osi y dlatego warto ustawiac wysokość kontenera oraz szerokość itemów */
+
+         align-items: flex-start; /* działa tak jak 'justify-content', ale w osi 'Y' */
+         /* height: 700px; na kontenerze oraz  align-items: stretch; spowoduje rozciągniecia itemów */
+         /* base-line powoduje wyrownanie do wirtualnej lini jesli maja rózne wysokosci */
+
+         /* align-content pozwala dla elementów wrapowanych pozycjowanie - default streach*/
+        /* align-content does not take left and right values */
+        align-content: center;     /* Pack items around the center - wszystkie razem */
+        /* align-content: start; */      /* Pack items from the start - wszystkie razem */
+        /* align-content: end; */       /* Pack items from the end - wszystkie razem */
+        /* align-content: flex-start; */ /* Pack flex items from the start */
+        /* align-content: flex-end; */  /* Pack flex items from the end */
+    }
+    .item{
+        width: 70px;
+        padding: 30px;
+        /* margin: 10px; */
+        background-color: #06af8f;
+        text-align: center;
+        font-size: 30px;
+        color: #fff;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="item item-1">A</div>
+        <div class="item item-2">B</div>
+        <div class="item item-3">C</div>
+        <div class="item item-4">D</div>
+        <div class="item item-5">E</div>
+    </div>
+</body>
+
+</html>

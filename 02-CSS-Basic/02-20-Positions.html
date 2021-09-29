@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        background-color: orangered;
+        width: 700px;
+        height: 600px;
+        position: relative; /*lub absolut wtedy nastepny position bedzie pozycjonowany */
+    }
+    .box {
+        /* width: 350px;
+        height: 100px; */
+        font-size: 25px;
+        color: #fff;
+    }
+ /* static jest wartoscia domyslna */
+ /* relative */
+    .box-1{
+        background-color: green;
+        position:absolute; /* Najblizszy rodzic nie jest static, a jest relative */
+        top: 50px;
+        left: 10px;
+    }
+    .box-2{
+        background-color: royalblue;
+        z-index: 1;
+        position: relative;
+    }
+    .box-3{
+        background-color: grey;
+    }
+
+    /* jesli jest absolut to wyskoczy z normalnego flow */
+    /* Element jest pozycjonowany względem pierwszego umieszczonego 
+    (nie statycznego) elementu przodka */
+
+    /* Jesli position:absolut i nie mam ustawione wysokosci i szerokosci to 
+    zachowa sie jak inline */
+
+    /* element z z-index musi miec ustawiony positon np na relative */
+
+    /* Fix wyskakuje z flow, ale jego pozycja jest zawsze ustawioan na viewport */
+
+    /* sticy dziala tak, ze sie przykleji do gory w czasie skorlowania, ale:
+    - postion: sticky 
+    - top: 0px */
+    </style> 
+
+<body>
+    <!-- <ul>
+        <li>Static</li>
+        <li>Relative</li>
+        <li>Absolute</li>
+        <li>Fixed</li>
+        <li>Sticky</li>
+    </ul> -->
+
+    <div class="container">
+        <div class="box box-1">Box 1</div>
+        <div class="box box-2">Box 2</div>
+        <div class="box box-3">Box 3</div>
+    </div>
+</body>
+
+</html>
