@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,9 +8,102 @@
     <title>Document</title>
 </head>
 <style>
+    /*
+    transition-propety (mand)
+    transition-duration (mand)
+    transition-delay (opt)
+    transition-time-function (opt) - The transition-timing-function CSS property sets how intermediate values are calculated for CSS properties being affected by
     
+    ****************************************************************************************************
+    transition-property (MAD) -> The transition-property CSS property sets the CSS properties to which a transition effect should be applied.
+    ****************************************************************************************************
+    Html 
+    //<a class="target">Hover over me</a>
+    Css
+    //.target {
+    //    font-size: 14px;
+    //    transition-property: font-size;
+    //    transition-duration: 4s;
+    //}
+
+    //.target:hover {
+    //font-size: 36px;
+    //}
+
+    ****************************************************************************************************
+    The transition-duration (MAD) - CSS property sets the length of time a transition animation should take to complete. 
+    By default, the value is 0s, meaning that no animation will occur.
+    ****************************************************************************************************
+    You may specify multiple durations; each duration will be applied to the corresponding property as specified by 
+    the transition-property property, which acts as a master list.
+    If there are fewer durations specified than in the master list, the user agent repeat the list of durations. 
+    If there are more durations, the list is truncated to the right size. In both case the CSS declaration stays valid.
+
+
+
+
+
+
+    ****************************************************************************************************
+    transition-delay - The transition-delay CSS property specifies the duration to wait before starting a property's transition effect when its value changes.
+    The delay may be zero, positive, or negative:
+
+    A value of 0s (or 0ms) will begin the transition effect immediately.
+    A positive value will delay the start of the transition effect for the given length of time.
+    A negative value will begin the transition effect immediately, and partway through the effect. `
+    In other words, the effect will be animated as if it had already been running for the given length of time.
+    You may specify multiple delays, which is useful when transitioning multiple properties. 
+    Each delay will be applied to the corresponding property as specified by the transition-property property,
+    which acts as a master list. If there are fewer delays specified than in the master list,
+    the list of delay values will be repeated until there are enough. If there are more delays,
+    the list of delay values will be truncated to match the number of properties. In both cases, the CSS declaration remains valid.
+    ****************************************************************************************************
+
+    ****************************************************************************************************
+    transition-time-function - The transition-timing-function CSS property sets how intermediate values 
+    are calculated for CSS properties being affected by a transition effect
+    ****************************************************************************************************
+
+    Each <easing-function> represents the easing function to link to the corresponding property to transition,
+    as defined in transition-property. The non-step keyword values (ease, linear, ease-in-out, etc.) each represent
+    cubic Bézier curve with fixed four point values, with the cubic-bezier() function value allowing for a non-predefined value.
+    The step timing functions divides the input time into a specified number of intervals that are equal in length.
+    It is defined by a number of steps and a step position.
+    https://developer.mozilla.org/en-US/docs/Web/CSS/transition-timing-function
+
+    transition-timing-function: ease;
+    transition-timing-function: ease-in;
+    transition-timing-function: ease-out;
+    transition-timing-function: ease-in-out;
+    transition-timing-function: linear;
+    transition-timing-function: step-start;
+    transition-timing-function: step-end;
+    */
+
+    .box {
+        width: 200px;
+        height: 200px;
+        background-color: orange;
+        /* transition-property: width;
+        transition-duration: 1s;
+        transition-timing-function: cubic-bezier(.17,.67,.54,.96); https://cubic-bezier.com/#0,0,1,1 */
+        /* transition-delay: 1s; */
+
+        /* All in one */
+        transition: width 1s 1s ease-in, background-color 5s;
+        /* transition: all 1s; */
+    }
+
+    .box:hover {
+        width: 400px;
+        background-color: blue;
+    }
 </style>
+
 <body>
-    
+    <div class="box">
+
+    </div>
 </body>
+
 </html>
